@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BL
 {
+    //2. Crea una clase Animal con un método HacerSonido(), este método escribe en
+    //consola el sonido que hace el animal.Implementa las clases Perro y Gato que
+    //sobrescriban ese método.
+
     public class Animal
     {
 
