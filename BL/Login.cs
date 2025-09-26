@@ -24,6 +24,7 @@ namespace BL
                     Password = "?\u0015r?J?8????\u0017?xQ}?W?T?\u001b?4Y^y\f\u0010{\u0005\u0005"
                 }
 
+
                 ];
 
             var mathUsuario = cuentas.FirstOrDefault(cuenta => cuenta.Usuario == login.Usuario && cuenta.Password == login.Password);
