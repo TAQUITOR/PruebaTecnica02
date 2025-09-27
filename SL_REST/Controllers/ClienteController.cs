@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SL_REST.Controllers;
 
 namespace SL_REST.Controllers
 {
@@ -10,7 +11,12 @@ namespace SL_REST.Controllers
     {
 
         private readonly BL.Cliente _cliente;
-        public ClienteController(BL.Cliente cliente) => _cliente = cliente;
+        private readonly ILogger<ClienteController> _logger;
+
+        public ClienteController(BL.Cliente cliente) {
+
+            _cliente = cliente;
+        };
         //8. Agrega un comentario XML a tu método GET/clientes para que Swagger lo muestre
         /// <summary>
         /// Comentario XML 
@@ -36,3 +42,21 @@ namespace SL_REST.Controllers
 
     }
 }
+
+
+
+
+
+/// <summary>
+///
+/// </summary>
+/// <param name="logger"></param>
+public WeatherForecastController(ILogger<ClienteController> logger)
+{
+    _logger = logger;
+}
+/// <summary>
+/// Gets weather forecast information
+/// </summary>
+/// <param name="parameter1">This is parameter 1</param>
+/// <param name="parameter2">This is parameter 2</param>
